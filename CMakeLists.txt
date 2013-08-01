@@ -28,5 +28,5 @@ TARGET_LINK_LIBRARIES(raphters_dynamic fcgi)
 ADD_LIBRARY(raphters_static STATIC ${RaphtersSources})
 SET_TARGET_PROPERTIES(raphters_static PROPERTIES LINKER_LANGUAGE C)
 
-ADD_EXECUTABLE(simple app/hello.c)
-TARGET_LINK_LIBRARIES(simple raphters_dynamic)
+ADD_EXECUTABLE(myapp app/myapp.c)
+TARGET_LINK_LIBRARIES(myapp raphters_dynamic)
