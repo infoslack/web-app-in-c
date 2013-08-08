@@ -26,10 +26,17 @@ Config Nginx to FastCGI:
         }
       }
 
-Execute cgi:
+Run cgi:
 
       cgi-fcgi -start  -connect localhost:9000 ./myapp
 
 or
 
       spawn-fcgi -a127.0.0.1 -p9000 -n ./myapp
+
+Look:
+[spawn-fcgi](https://github.com/lighttpd/spawn-fcgi)
+
+In case of problems to end fastcgi find PID:
+
+      netstat -tpan |grep "LISTEN" |grep :9000
